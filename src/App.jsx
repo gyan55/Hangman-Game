@@ -1,7 +1,9 @@
 
+import { Routes,Route } from 'react-router-dom';
 import './App.css'
-import Button from './components/Button/Button'
-import TextInput from './components/TextInput/textInput';
+import StartGame from './pages/StartGame';
+import PlayGame from './pages/Playgame';
+
 
 function App() {
   
@@ -9,13 +11,13 @@ function App() {
   return (
     
     <div>
-      <div>hi bro</div>
-      <Button text= "click me" ></Button>
-      <TextInput 
-      label ="enter your naame"
-      placeholder="name"
-      onChangeHandler = {() => console.log('name changed')}
-      ></TextInput>
+      
+      
+     <Routes>
+        
+        <Route path="/play" element={<PlayGame />} />
+        <Route path="/start" element={<StartGame />} />
+     </Routes>
 
     </div>
   );

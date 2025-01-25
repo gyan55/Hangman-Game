@@ -1,10 +1,20 @@
-function Button({ text, onClickHandler }) {
+import getButtonStyling from "./getButtonStyleType";
 
-    return <button 
-    
-    className="text-white bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded"
-    >{text}</button>;
-    
-    }
-    
-    export default Button;
+
+function Button({ buttonType = "button", text, styleType, onClickHandler }) {
+
+
+    return (
+        <button 
+            type={buttonType}
+            onClick={onClickHandler}
+            className={`px-4 py-2 ${getButtonStyling(styleType)}  text-white  rounded-md transition-all`}
+        >
+            {text}
+        </button>
+        
+    );
+
+}
+
+export default Button;

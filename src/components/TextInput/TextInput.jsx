@@ -1,13 +1,19 @@
-function TextInput({ type = "text",label,placeholder,onChangeHandler }) {
-  return (
-    <label>
-     {label}
-      <input type= {type}
-      className="border border-gray-400 px-2 py-4 rounded-lg w-full"
-      placeholder={placeholder}
-      onChange={onChangeHandler} />
-    </label>
-  );
-}
+function TextInput({ label, type = 'text', value, onChange }) {
 
+    return (
+
+        <label className="block">
+            {label && <span className="text-gray-700">{label}</span>}
+            <input
+                className="px-4 py-2 border border-gray-500 rounded-md w-full"
+                onChange={onChange}
+                placeholder={label}
+                type={type}
+                value={value}
+            />
+
+        </label>
+    );
+
+}
 export default TextInput;
