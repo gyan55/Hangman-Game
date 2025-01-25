@@ -11,8 +11,16 @@ function StartGame() {
 
     return (
         <div>
-            <h1>Start Game</h1>
-            <TextInputFormContainer onSubmit={handleSubmit} />
+             
+             <nav className="bg-purple-800 text-white p-4 shadow-md">
+                <h1 className="text-center text-4xl font-extrabold tracking-widest uppercase">Guess if u can</h1>
+            </nav>
+
+            <div className="flex flex-col items-center justify-center flex-1">
+                <h1 className="text-2xl font-bold mt-4">Start Game</h1>
+                <TextInputFormContainer onSubmit={handleSubmit} />
+            </div>
+            
         </div>
     );
 }
